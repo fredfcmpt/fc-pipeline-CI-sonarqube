@@ -37,7 +37,7 @@ Foi criada uma aplicacao Node.js simples com uma calculadora e mensagem de execu
 | Quality Gate | `sonar.qualitygate.wait=true` | VERDE - OK |
 | Evidencia local | `Analise/npm-test-resultado.txt` | VERDE - OK |
 | Pull Request aberto | `https://github.com/fredjml/fc-pipeline-CI-sonarqube/pull/1` | VERDE - OK |
-| Branch Protection | Instrucoes no README | PENDENTE - marcar checks como Required no GitHub |
+| Branch Protection | Checks `tests`, `sonarqube` e `SonarCloud Code Analysis` configurados como obrigatorios | VERDE - OK |
 
 ## 4. Tech Stack e Padroes
 
@@ -145,7 +145,15 @@ Checks validados no PR:
 | `sonarqube` | Verde - passou |
 | `SonarCloud Code Analysis` | Verde - passou |
 
-O entregavel final deve manter o Pull Request aberto, com os checks `tests`, `sonarqube` e/ou `SonarCloud Code Analysis` verdes e marcados como `Required`.
+Required status checks configurados na branch `main`:
+
+| Required check | Origem |
+| --- | --- |
+| `tests` | GitHub Actions |
+| `sonarqube` | GitHub Actions |
+| `SonarCloud Code Analysis` | SonarCloud |
+
+O entregavel final deve manter o Pull Request aberto, com os checks `tests`, `sonarqube` e `SonarCloud Code Analysis` verdes e marcados como `Required`.
 
 Importante: o merge nao deve ser realizado antes da avaliacao.
 
